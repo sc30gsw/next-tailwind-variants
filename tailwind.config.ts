@@ -1,8 +1,7 @@
 import { withTV } from 'tailwind-variants/dist/transformer.js'
 import type { Config } from 'tailwindcss'
 
-// withTVはresponsiveVariantsの際に用いる
-const config: Config = withTV({
+const config = {
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -18,6 +17,7 @@ const config: Config = withTV({
 		},
 	},
 	plugins: [],
-})
+} satisfies Config
 
-export default config
+// withTVはresponsiveVariantsの際に用いる
+export default withTV(config)
