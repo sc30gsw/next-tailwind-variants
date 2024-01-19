@@ -31,6 +31,23 @@ const button = tv(
 	{ responsiveVariants: ['sm', 'md', 'lg', 'xl'] },
 )
 
+const buyButton = tv({
+	extend: button,
+	base: [
+		'text-sm',
+		'text-white',
+		'rounded-lg',
+		'shadow-lg',
+		'uppercase',
+		'tracking-wider',
+		'bg-blue-500',
+		'hover:bg-blue-600',
+		'shadow-blue-500/50',
+		'dark:bg-blue-500',
+		'dark:hover:bg-blue-600',
+	],
+})
+
 type ButtonProps = VariantProps<typeof button>
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -44,6 +61,8 @@ export const Button: FC<ButtonProps> = (props) => {
 					lg: 'success',
 					xl: 'error',
 				},
+				// class or classNameでオーバーライド可能
+				class: 'h-20 shadow-lg',
 				size: props.size,
 			})}
 		>
