@@ -1,6 +1,7 @@
 import { withTV } from 'tailwind-variants/dist/transformer.js'
 import type { Config } from 'tailwindcss'
 
+// withTVはresponsiveVariantsの際に用いる
 const config: Config = withTV({
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',

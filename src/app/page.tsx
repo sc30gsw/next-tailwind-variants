@@ -3,7 +3,7 @@ import { Button } from './components/Button'
 const Home = () => {
 	return (
 		<main className="h-screen w-screen">
-			<Button color="secondary" />
+			<Button size="lg" />
 		</main>
 	)
 }
