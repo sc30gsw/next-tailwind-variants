@@ -52,21 +52,26 @@ type ButtonProps = VariantProps<typeof button>
 
 export const Button: FC<ButtonProps> = (props) => {
 	return (
-		<button
-			type="button"
-			className={button({
-				color: {
-					initial: 'primary',
-					sm: 'secondary',
-					lg: 'success',
-					xl: 'error',
-				},
-				// class or classNameでオーバーライド可能
-				class: 'h-20 shadow-lg',
-				size: props.size,
-			})}
-		>
-			Click Me
-		</button>
+		<div className="flex items-center gap-3">
+			<button
+				type="button"
+				className={button({
+					color: {
+						initial: 'primary',
+						sm: 'secondary',
+						lg: 'success',
+						xl: 'error',
+					},
+					// class or classNameでオーバーライド可能
+					class: 'h-20 shadow-lg',
+					size: props.size,
+				})}
+			>
+				Click Me
+			</button>
+			<button type="button" className={buyButton()}>
+				Buy button
+			</button>
+		</div>
 	)
 }
